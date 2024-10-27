@@ -12,15 +12,15 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240918143947_SeedAuth")]
-    partial class SeedAuth
+    [Migration("20241027191234_InitDb")]
+    partial class InitDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.8")
+                .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -97,15 +97,15 @@ namespace DataAccess.Migrations
                         {
                             Id = 1,
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "20e69ec6-bc43-4d1a-815c-68b5f8d7d4bd",
+                            ConcurrencyStamp = "6c67ab90-403c-4f7d-ada7-158508cbee05",
                             Email = "daniel@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "DANIEL@GMAIL.COM",
                             NormalizedUserName = "DANIELH74",
-                            PasswordHash = "AQAAAAIAAYagAAAAEGMPh80asfun75QMwULAmsuAjGAcqPSOZc5M7ooUgQdEEMXpNfScikkd51WIgTlsAA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJHnV2WmvCXeaMdCiZ7kL1DPTazKHdGTEJj1Tw8a4uVDp1QlbqXFA3ewkuLgB4fidQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "549b5cb1-8ecd-4635-8dff-8b64938a5af8",
+                            SecurityStamp = "3c96cf0d-205d-4e39-a9c4-c135ed5dee40",
                             TwoFactorEnabled = false,
                             UserName = "Danielh74"
                         });

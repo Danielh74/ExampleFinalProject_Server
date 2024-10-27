@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class SeedAuth : Migration
+    public partial class InitDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -208,7 +208,7 @@ namespace DataAccess.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { 1, 0, "20e69ec6-bc43-4d1a-815c-68b5f8d7d4bd", "daniel@gmail.com", false, false, null, "DANIEL@GMAIL.COM", "DANIELH74", "AQAAAAIAAYagAAAAEGMPh80asfun75QMwULAmsuAjGAcqPSOZc5M7ooUgQdEEMXpNfScikkd51WIgTlsAA==", null, false, "549b5cb1-8ecd-4635-8dff-8b64938a5af8", false, "Danielh74" });
+                values: new object[] { 1, 0, "6c67ab90-403c-4f7d-ada7-158508cbee05", "daniel@gmail.com", false, false, null, "DANIEL@GMAIL.COM", "DANIELH74", "AQAAAAIAAYagAAAAEJHnV2WmvCXeaMdCiZ7kL1DPTazKHdGTEJj1Tw8a4uVDp1QlbqXFA3ewkuLgB4fidQ==", null, false, "3c96cf0d-205d-4e39-a9c4-c135ed5dee40", false, "Danielh74" });
 
             migrationBuilder.InsertData(
                 table: "Categories",
