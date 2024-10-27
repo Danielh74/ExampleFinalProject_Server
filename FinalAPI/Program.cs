@@ -74,8 +74,8 @@ public class Program
 						"http://localhost:3000",
 						"http://localhost:5173",
 						"http://localhost:5174",
-                        //host
-                    ])
+						"https://mango-cliff-0cba9c000.5.azurestaticapps.net"
+					])
 				.AllowAnyHeader()
 				.AllowAnyMethod()
 				.AllowCredentials();
