@@ -86,6 +86,19 @@ public class Program
 
 		app.UseCors(corsPolicy);
 
+		using(var scope = app.Services.CreateScope())
+		{
+			try
+			{
+				var context = scope.ServiceProvider.GetRequiredService<DataContext>();
+				context.Database.Migrate();
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine("Error executing migration: "+ ex.Message);
+			}
+		}
+
 		// Configure the HTTP request pipeline.
 		if (app.Environment.IsDevelopment())
 		{
