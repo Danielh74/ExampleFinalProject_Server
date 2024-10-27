@@ -65,20 +65,19 @@ public class Program
 
 		var corsPolicy = "CorsPolicy";
 
-		//var host = builder.Configuration.GetValue<string>("AllowedHosts");
 		builder.Services.AddCors(options =>
 		{
 			options.AddPolicy(name: corsPolicy, policy =>
 			{
-				policy.WithOrigins([
+				policy.WithOrigins(
 						"http://localhost:3000",
 						"http://localhost:5173",
 						"http://localhost:5174",
 						"https://mango-cliff-0cba9c000.5.azurestaticapps.net"
-					])
-				.AllowAnyHeader()
-				.AllowAnyMethod()
-				.AllowCredentials();
+					)
+					.AllowAnyHeader()
+					.AllowAnyMethod()
+					.AllowCredentials();
 			});
 		});
 
@@ -86,7 +85,7 @@ public class Program
 
 		app.UseCors(corsPolicy);
 
-		using(var scope = app.Services.CreateScope())
+		using (var scope = app.Services.CreateScope())
 		{
 			try
 			{
