@@ -69,12 +69,11 @@ public class Program
 		{
 			options.AddPolicy(name: corsPolicy, policy =>
 			{
-				policy.WithOrigins(
-						"http://localhost:3000",
+				policy.WithOrigins([	"http://localhost:3000",
 						"http://localhost:5173",
 						"http://localhost:5174",
 						"https://mango-cliff-0cba9c000.5.azurestaticapps.net"
-					)
+						])
 					.AllowAnyHeader()
 					.AllowAnyMethod()
 					.AllowCredentials();
